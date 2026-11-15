@@ -9,7 +9,6 @@ int main()
     int dice;
     char choice;
 
-    // Initialize random number generator
     srand(time(0));
 
     printf("=================================\n");
@@ -31,7 +30,7 @@ int main()
 
         printf("\nYou rolled: %d\n", dice);
 
-        // Player 1 turn
+        
         if (currentPlayer == 1)
         {
             if (position1 + dice <= 100)
@@ -41,7 +40,7 @@ int main()
 
             printf("Player 1 is at position: %d\n", position1);
 
-            // Ladders
+            
             if (position1 == 3)
             {
                 position1 = 22;
@@ -68,7 +67,7 @@ int main()
                 printf("LADDER! You climbed to %d\n", position1);
             }
 
-            // Snakes
+          
             else if (position1 == 17)
             {
                 position1 = 4;
@@ -102,7 +101,7 @@ int main()
             }
         }
 
-        // Player 2 turn
+     
         else
         {
             if (position2 + dice <= 100)
@@ -112,7 +111,7 @@ int main()
 
             printf("Player 2 is at position: %d\n", position2);
 
-            // Ladders
+      
             if (position2 == 3)
             {
                 position2 = 22;
@@ -139,7 +138,7 @@ int main()
                 printf("LADDER! You climbed to %d\n", position2);
             }
 
-            // Snakes
+
             else if (position2 == 17)
             {
                 position2 = 4;
@@ -173,7 +172,7 @@ int main()
             }
         }
 
-        // Change player unless a 6 was rolled
+
         if (dice != 6)
         {
             if (currentPlayer == 1)
